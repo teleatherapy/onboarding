@@ -1,13 +1,13 @@
 brew_install() {
     if brew list $1 &>/dev/null; then
-        echo "${1} is already installed"
+        echo "$1 is already installed"
     else
         echo "Installing $1..."
         brew install $1
     fi
 }
 
-# Install Homebrew
+# Install or update Homebrew
 NONINTERACTIVE=1
 
 which -s brew
@@ -16,7 +16,7 @@ if [[ $? != 0 ]] ; then
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
-    echo "Updating Homewbrew..."
+    echo "Updating Homebrew..."
     brew update
 fi
 
@@ -54,5 +54,5 @@ fi
 echo "Done. Now run these commands:"
 echo ""
 echo "    cd $SETUP_DIRECTORY"
-echo "    ./01-command.sh"
+echo "    ./01-prerequisites.sh"
 echo ""
