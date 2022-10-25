@@ -3,7 +3,7 @@ brew_install() {
         echo "$1 is already installed"
     else
         echo "Installing $1..."
-        /opt/homebrew/bin/brew install $1
+        brew install $1
     fi
 }
 
@@ -19,6 +19,11 @@ else
     echo "Updating Homebrew..."
     brew update
 fi
+
+# Add Homebrew binaries to the PATH
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/davecalnan/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/davecalnan/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Download the GitHub repo
 brew_install gh
