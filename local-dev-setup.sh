@@ -3,7 +3,7 @@ brew_install() {
         echo "$1 is already installed"
     else
         echo "Installing $1..."
-        brew install $1
+        /opt/homebrew/bin/brew install $1
     fi
 }
 
