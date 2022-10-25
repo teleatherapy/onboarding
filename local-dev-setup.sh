@@ -28,15 +28,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Download the GitHub repo
 brew_install gh
 
-GITHUB_STATUS=$(gh auth status)
-UNAUTHENTICATED_MESSAGE="You are not logged into any GitHub hosts."
-
-if [[ $GITHUB_STATUS == *$UNAUTHENTICATED_MESSAGE* ]]; then
-    echo "Logging in to GitHub..."
-    gh auth login
-else
-    echo "Already logged in to GitHub."
-fi
+echo "Logging in to GitHub..."
+gh auth login
 
 # Install or update the repo
 
