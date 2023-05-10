@@ -21,8 +21,8 @@ else
 fi
 
 # Add Homebrew binaries to the PATH
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/davecalnan/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/davecalnan/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Download the GitHub repo
