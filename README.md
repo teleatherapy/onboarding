@@ -1,4 +1,4 @@
-# Teleatherapy Onboarding
+# Telea Onboarding
 
 To set up a local development environment, open Terminal and run this command:
 
